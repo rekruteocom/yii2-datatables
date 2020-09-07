@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @copyright Copyright (c) 2014 Serhiy Vinichuk
  * @license MIT
@@ -128,7 +129,7 @@ class DataTableAction extends Action
         $originalQuery = $this->query;
         $filterQuery = clone $originalQuery;
         $draw = $this->getParam('draw');
-        $filterQuery->where = null;
+        //$filterQuery->where = null;
         $search = $this->getParam('search', ['value' => null, 'regex' => false]);
         $columns = $this->getParam('columns', []);
         $order = $this->getParam('order', []);
@@ -249,4 +250,4 @@ class DataTableAction extends Action
 
         return $response;
     }
-} 
+}
